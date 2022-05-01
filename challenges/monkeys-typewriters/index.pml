@@ -10,6 +10,9 @@ chan char = [0] of {byte};
 chan stop[MONKEYS] = [MONKEYS] of {byte};
 // глобальный счетчик остановленных обезъянок
 byte stop_counter = 0;
+// массив для сбора символов от обезъян
+// определил глобально, чтобы использовать в ltl формуле
+byte arr[LENGTH];
 
 proctype monkey(chan controller; byte c) {
   byte needStop;
@@ -32,8 +35,6 @@ proctype monkey(chan controller; byte c) {
 proctype reviewer() {
   int monkeys = MONKEYS;
   int length = LENGTH;
-
-  byte arr[LENGTH];
   
   int acc, i;
 
@@ -87,4 +88,22 @@ init {
     run monkey(stop[j], i);
     j++;
   }
+}
+
+ltl p1 {
+  []<>(
+    arr[0] == str[0] &
+    arr[1] == str[1] &
+    arr[2] == str[2] &
+    arr[3] == str[3] &
+    arr[4] == str[4] &
+    arr[5] == str[5] &
+    arr[6] == str[6] &
+    arr[7] == str[7] &
+    arr[8] == str[8] &
+    arr[9] == str[9] &
+    arr[10] == str[10] &
+    arr[11] == str[11] &
+    arr[12] == str[12] 
+  )
 }

@@ -10,7 +10,7 @@ VSCode extension: `Promela`
 
 ## Monkeys Typewriters
 
-Task made by Higher School of Economics | Irina A. Lomazova & Roman Nesterov
+Task made by Higher School of Economics | [Irina A. Lomazova](https://www.hse.ru/en/staff/ilomazova) & [Roman Nesterov](https://www.hse.ru/en/staff/rnesterov)
 
 ---
 
