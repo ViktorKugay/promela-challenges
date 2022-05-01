@@ -12,6 +12,8 @@ VSCode extension: `Promela`
 
 Task made by Higher School of Economics | Irina A. Lomazova & Roman Nesterov
 
+---
+
 Model a system with 26 typing monkeys and 1 human reviewer.
 1. Each monkey has its own button, which once pressed, sends a lower-case character (‘a’..’z’) to the reviewer. A monkey can press its button at any time, until the experiment is over.
 2. The reviewer check the incoming sequence of characters, one by one, against the quote “to be or not to be” (spaces are ignored). As soon as there is a match, the reviewer stops the experiment.
