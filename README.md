@@ -1,5 +1,13 @@
 # Promela Challenges
 
+## Install spin
+
+```bash
+brew install spin
+```
+
+VSCode extension: `Promela`
+
 ## Monkeys Typewriters
 
 Model a system with 26 typing monkeys and 1 human reviewer.
