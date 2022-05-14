@@ -19,7 +19,7 @@ proctype Pillar(byte id; chan my) {
             my?signal -> {
                 gate[id] = !gate[id];
                 gate[(id + 1) % 5] = !gate[(id + 1) % 5];
-                gate[(id - 1) % 5] = !gate[(id - 1) % 5];
+                gate[(id + 4) % 5] = !gate[(id + 4) % 5];
             }
         }
     od
@@ -32,7 +32,7 @@ active proctype Commander() {
     do
         ::!isGateOpen -> {
             select(id: 0 .. 4);
-            printf("send $d\n", id);
+            printf("send %d\n", id);
             c[id]!1;
         }
         :: else  -> {
@@ -48,4 +48,8 @@ init {
     for (id: 0 .. 4) {
         run Pillar(id, c[id])
     }
+}
+
+ltl p1 {
+    []!isGateOpen
 }
