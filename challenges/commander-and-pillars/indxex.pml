@@ -41,3 +41,11 @@ active proctype Commander() {
         }
     od
 }
+
+init {
+    byte id;
+    
+    for (id: 0 .. 4) {
+        run Pillar(id, c[id])
+    }
+}
